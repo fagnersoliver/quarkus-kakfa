@@ -6,6 +6,8 @@ import org.eclipse.microprofile.reactive.messaging.Channel;
 import org.eclipse.microprofile.reactive.messaging.Emitter;
 
 import javax.inject.Inject;
+import javax.json.bind.Jsonb;
+import javax.json.bind.JsonbBuilder;
 import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -33,7 +35,7 @@ public class ProduceTopicKafka {
         //String json = create.toJson(dto);
         emitter.send("fagner");
 
-        //System.out.println(json);
+        System.out.println(json);
 
         return Response.status(Status.CREATED).build();
     }
